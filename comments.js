@@ -11,7 +11,7 @@ let initialState = {
   users: []
 };
 
-function reducer(state = initialState, action) {
+function comments(state = initialState, action) {
   switch (action.type) {
     case ADD_COMMENT:
       return [{
@@ -53,17 +53,6 @@ function reducer(state = initialState, action) {
       });
     default:
       return state;
-  }
-};
-
-function comments(state = [], action) {
-  switch (action.type) {
-    case ADD_COMMENT:
-      return [{
-        id: action: id,
-        text: action.text,
-        votes: 0
-      }, ...state.comments];
   }
 };
 
