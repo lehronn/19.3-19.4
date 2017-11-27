@@ -6,12 +6,9 @@ import {
   THUMB_DOWN_COMMENT
 } from './actions.js';
 
-let initialState = [
-  comments: [],
-  users: []
-];
+let initialState = [];
 
-function comments(state = [], action) {
+function comments(state = initialState, action) {
   switch (action.type) {
     case ADD_COMMENT:
       return [{
